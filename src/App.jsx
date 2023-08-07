@@ -10,7 +10,7 @@ const App = () => {
     homeValue: 3000,
     downPayment: 3000 * 0.2,
     loanAmount: 3000,
-    loanTerm: 3000,
+    loanTerm: 5,
     interestRate: 5,
   })
   return (
@@ -22,11 +22,11 @@ const App = () => {
           <Grid container spacing={5}>
             <Grid item xs={12} md={6}>
               <SliderSelect data={data} setData={setData} />
-              <TenureSelect />
+              <TenureSelect data={data} setData={setData} />
             </Grid>
 
             <Grid item xs={12} md={6}>
-              <Result />
+              <Result data={data} />
             </Grid>
 
           </Grid>
